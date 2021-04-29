@@ -5,7 +5,7 @@ import random
 attempts_list = []
 
 
-def show_score():
+def show_scores():
     if len(attempts_list) <= 0:
         print("There is currently no high score, it's yours for the taking!")
     else:
@@ -18,7 +18,7 @@ def start_game():
     player_name = input("What is your name? ")
     wanna_play = input("Hi, {}, would you like to play the guessing game? (Enter Yes/No) ".format(player_name))
     attempt = 0
-    show_score()
+    show_scores()
     while wanna_play.lower() == "yes":
         try:
             guess = input("Pick a number between 1 and 10 ")
@@ -31,7 +31,7 @@ def start_game():
                 print("It took you {} attempts".format(attempt))
                 play_again = input("Would you like to play again? (Enter Yes/No) ")
                 attempt = 0
-                show_score()
+                show_scores()
                 random_number = int(random.randint(1, 10))
                 if play_again.lower() == "no":
                     print("That's cool, have a good one!")
