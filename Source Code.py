@@ -12,7 +12,7 @@ def show_scores():
         print("The current high score is {} attempts".format(min(attempts_list)))
 
 
-def start_game():
+def start_the_game():
     random_number = int(random.randint(1, 10))
     print("Hello traveler! Welcome to the game of guesses!")
     player_name = input("What is your name? ")
@@ -50,4 +50,4 @@ def start_game():
 
 
 if __name__ == '__main__':
-    start_game()
+    start_the_game()
